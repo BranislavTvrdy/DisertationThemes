@@ -1,0 +1,41 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.ImportData
+@{
+    ViewData["Title"] = "ImportData";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-page-handler="UploadFile" method="post" enctype="multipart/form-data">
+            @*@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="postedFile" />
+                <input type="submit" value="Import" />
+            }*@
+            CSV súbor
+            <div class="form-group">
+                <input type="file" value="Choose file" class="form-control" accept=".csv" id="myFile" name="fileName" />
+                @*<input type="file" class="form-control" />*@
+                @*<label class="control-label">No file chosen</label>*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Nahrať" class="btn btn-default" onclick="myFunction()"/>
+            </div>
+        </form>
+        <p id="demo"></p>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myFile").value;
+                document.getElementById("demo").innerHTML = x;
+            }
+        </script>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Naspäť na list</a>
+</div>
+
+
+@Model.Data

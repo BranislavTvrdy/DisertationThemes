@@ -1,0 +1,44 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.StPrograms.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Zoznam študijných programov</h2>
+
+<p>
+    <a asp-page="Create">Vytvoriť nový</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => "Názov študijného programu")//model.StPrograms[0].Name)*@
+                Názov študijného programu
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.StPrograms[1].FieldOfStudy)*@
+                Názov študijného odboru
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.StPrograms) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FieldOfStudy)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editovať</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detaily</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Odstrániť</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

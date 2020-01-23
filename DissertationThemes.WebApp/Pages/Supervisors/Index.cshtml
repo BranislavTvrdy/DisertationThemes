@@ -1,0 +1,36 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.Supervisors.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Zoznam školiteľov</h2>
+
+<p>
+    <a asp-page="Create">Vytvor nového školiteľa</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Meno a priezvisko s titulmi
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Supervisors) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

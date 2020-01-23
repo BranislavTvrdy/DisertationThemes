@@ -1,0 +1,64 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.Themes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Editácia</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Themes.Id" />
+            <div class="form-group">
+                <label asp-for="Themes.Name" class="control-label">Názov témy</label>
+                <input asp-for="Themes.Name" class="form-control" />
+                <span asp-validation-for="Themes.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Themes.SupervisorId" class="control-label">Školiteľ</label>
+                <input asp-for="Themes.SupervisorId" class="form-control" />
+                <span asp-validation-for="Themes.SupervisorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Themes.StProgramId" class="control-label">Študijny program</label>
+                <input asp-for="Themes.StProgramId" class="form-control" />
+                <span asp-validation-for="Themes.StProgramId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Themes.IsFullTimeStudy" class="control-label">Denné štúdium</label>
+                <input asp-for="Themes.IsFullTimeStudy" class="form-control" />
+                <span asp-validation-for="Themes.IsFullTimeStudy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Themes.IsExternalStudy" class="control-label">Externé štúdium</label>
+                <input asp-for="Themes.IsExternalStudy" class="form-control" />
+                <span asp-validation-for="Themes.IsExternalStudy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Themes.ResearchType" class="control-label">Typ výskumu</label>
+                <input asp-for="Themes.ResearchType" class="form-control" />
+                <span asp-validation-for="Themes.ResearchType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Themes.Description" class="control-label">Popis</label>
+                <input asp-for="Themes.Description" class="form-control" style="height: auto"/>
+                <span asp-validation-for="Themes.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Uložiť" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Naspäť na list</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

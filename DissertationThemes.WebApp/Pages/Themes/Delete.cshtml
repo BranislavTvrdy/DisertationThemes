@@ -1,0 +1,83 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.Themes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<style>
+    .dl-horizontal dt {
+        width: 250px;
+    }
+    .dl-horizontal dd {
+        margin-left: 260px;
+    }
+</style>
+<h2>Vymazať tému</h2>
+
+<h3>Ste si istý že chcete zmazať túto položku ?</h3>
+<div>
+    <h4>Dizertačná práca</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Názov témy
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Themes.Name)
+        </dd>
+        <dt>
+            Denné štúdium
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Themes.IsFullTimeStudy)
+        </dd>
+        <dt>
+            Externé štúdium
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Themes.IsExternalStudy)
+        </dd>
+        <dt>
+            Školiteľ
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Supervisor.FullName)
+        </dd>
+        <dt>
+            Štúdijný program
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StProgram.Name)
+        </dd>
+        <dt>
+            Štúdijný odbor
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StProgram.FieldOfStudy)
+        </dd>
+        <dt>
+            Typ výskumu
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Themes.ResearchType)
+        </dd>
+        <dt>
+            Popis
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Themes.Description)
+        </dd>
+        <dt>
+            Datum vytvorenia
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Themes.Created)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Themes.Id" />
+        <input type="submit" value="Odstrániť" class="btn btn-default" /> |
+        <a asp-page="./Index">Naspäť na list</a>
+    </form>
+</div>

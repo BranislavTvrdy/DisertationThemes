@@ -1,0 +1,44 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.Supervisors.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detaily</h2>
+
+<div>
+    <h4>Customers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Supervisors.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Supervisors.Id)
+        </dd>
+        <dt>
+            Meno
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Supervisors.FullName)
+        </dd>
+        <dt>
+            Vypísané témy
+        </dt>
+        <dd>
+            @foreach (var item in Model.Supervisors.Themes)
+            {
+                <dt>
+                    <dd>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </dd>
+                </dt>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Supervisors.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

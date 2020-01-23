@@ -1,0 +1,43 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.StPrograms.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Pridaj nový študijný program</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="StPrograms.Id" class="control-label"></label>
+                <input asp-for="StPrograms.Id" class="form-control" />
+                <span asp-validation-for="StPrograms.Id" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="StPrograms.Name" class="control-label">Názov študijného programu</label>
+                <input asp-for="StPrograms.Name" class="form-control" />
+                <span asp-validation-for="StPrograms.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StPrograms.FieldOfStudy" class="control-label">Názov študijného odboru</label>
+                <input asp-for="StPrograms.FieldOfStudy" class="form-control" />
+                <span asp-validation-for="StPrograms.FieldOfStudy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Vytvoriť" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Naspäť na list</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,47 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.StPrograms.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<style>
+    .dl-horizontal dt {
+        width: 250px;
+    }
+    .dl-horizontal dd {
+        margin-left: 260px;
+    }
+</style>
+<h2>Vymazať študijný program</h2>
+
+<h3>Ste si istý že chcete zmazať túto položku ?</h3>
+<div>
+    <h4>Študijný program</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StPrograms.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StPrograms.Id)
+        </dd>
+        <dt>
+            Názov študijného programu@*@Html.DisplayNameFor(model => model.StPrograms.Name)*@
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StPrograms.Name)
+        </dd>
+        <dt>
+            Názov študijného odboru@*@Html.DisplayNameFor(model => model.StPrograms.FieldOfStudy)*@
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StPrograms.FieldOfStudy)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="StPrograms.Id" />
+        <input type="submit" value="Odstrániť" class="btn btn-default" /> |
+        <a asp-page="./Index">Naspäť na list</a>
+    </form>
+</div>

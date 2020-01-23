@@ -1,0 +1,60 @@
+﻿@page
+@model DissertationThemes.WebApp.Pages.Themes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Zoznam tém dizertačných prác</h2>
+
+<p>
+    <a asp-page="Create">Vytvoriť novú tému</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Názov témy
+            </th>
+            <th>
+                Denné štúdium
+            </th>
+            <th>
+                Externé štúdium
+            </th>
+            <th>
+                Štúdijný program
+            </th>
+            <th>
+                Školiteľ
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Themes.OrderBy(t  => t.Name)) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsFullTimeStudy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsExternalStudy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.StPrograms.First(s => s.Id == item.StProgramId).Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Supervisors.First(s => s.Id == item.SupervisorId).FullName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editovať</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detaily</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Odstrániť</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
