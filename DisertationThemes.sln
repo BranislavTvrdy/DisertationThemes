@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisertationThemes.Database", "DisertationThemes.Database\DisertationThemes.Database.csproj", "{4BCCE266-B942-4489-AEAB-D72DAC0FE1E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DissertationThemes.WebApp", "DissertationThemes.WebApp\DissertationThemes.WebApp.csproj", "{FB9B9A3B-B04D-43A4-88FA-23522795BD86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DissertationThemes.ServiceApp", "DissertationThemes.ServiceApp\DissertationThemes.ServiceApp.csproj", "{2BB98939-70DE-4BB5-A50B-E35E1C0EEC94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DissertationThemesService.Client", "DissertationThemesService.Client\DissertationThemesService.Client.csproj", "{67A74FA0-F566-4859-AD1B-6A2F0116F832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DissertationThemes.GeneratorApp", "DissertationThemes.GeneratorApp\DissertationThemes.GeneratorApp.csproj", "{8535FBB7-717E-4C9D-9C76-806C1F103A27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BCCE266-B942-4489-AEAB-D72DAC0FE1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BCCE266-B942-4489-AEAB-D72DAC0FE1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BCCE266-B942-4489-AEAB-D72DAC0FE1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BCCE266-B942-4489-AEAB-D72DAC0FE1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9B9A3B-B04D-43A4-88FA-23522795BD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9B9A3B-B04D-43A4-88FA-23522795BD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9B9A3B-B04D-43A4-88FA-23522795BD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9B9A3B-B04D-43A4-88FA-23522795BD86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BB98939-70DE-4BB5-A50B-E35E1C0EEC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BB98939-70DE-4BB5-A50B-E35E1C0EEC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BB98939-70DE-4BB5-A50B-E35E1C0EEC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BB98939-70DE-4BB5-A50B-E35E1C0EEC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A74FA0-F566-4859-AD1B-6A2F0116F832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A74FA0-F566-4859-AD1B-6A2F0116F832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A74FA0-F566-4859-AD1B-6A2F0116F832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A74FA0-F566-4859-AD1B-6A2F0116F832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8535FBB7-717E-4C9D-9C76-806C1F103A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8535FBB7-717E-4C9D-9C76-806C1F103A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8535FBB7-717E-4C9D-9C76-806C1F103A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8535FBB7-717E-4C9D-9C76-806C1F103A27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA3A0CF6-EBA4-4AD1-BAEF-DE941BA7A2CF}
+	EndGlobalSection
+EndGlobal
